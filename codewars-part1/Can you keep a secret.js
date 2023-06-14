@@ -1,12 +1,17 @@
 function createSecretHolder(secret) {
-    console.log(this)
-    let obj = this
-    obj.getSecret = function() {
-        return this
+    let secretStorage = {
+        sec: secret,
+        getSecret() {
+            return this.sec
+        },
+        setSecret(n) {
+            this.sec = n
+        }
     }
-    return secret
+    return secretStorage
 }
 let obj = createSecretHolder(7)
+console.log(obj)
 obj.getSecret()
 obj.setSecret(2)
 obj.getSecret()
