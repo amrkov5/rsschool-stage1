@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Georgia";
+  src: url("../../../fonts/Georgia.ttf");
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  scroll-behavior: smooth;
+  background-color: azure;
+}
+
+.main-container {
+  max-width: 1280px;
+  margin: auto auto;
+}
+
+.start-screen {
+  padding-top: 30px;
+  background: url("../assets/main/img/noise_transparent@2x.svg") repeat, radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), url("../assets/main/img/start-screen-background.png");
+  min-height: 908px;
+}
+.start-screen .header {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 1200px;
+  height: 60px;
+}
+.start-screen .header-logo {
+  width: 184px;
+  height: 60px;
+}
+.start-screen .header-logo .header__text_bigger {
+  color: #F1CDB3;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  margin: 0 0 10px 0;
+}
+.start-screen .header-logo .header__text {
+  color: #ffffff;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
