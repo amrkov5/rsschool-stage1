@@ -2,20 +2,56 @@
   font-family: "Georgia";
   src: url("../../../fonts/Georgia.ttf");
 }
+.start-screen .start-container .text-container .start-h1 {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 130%;
+  /* or 57px */
+}
+
+.help .help__header, .friends-section .friends__header, .about-section .about-wrap .about-text-container .about__h3-text {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  /* or 45px */
+  letter-spacing: 0.06em;
+}
+
+.help .help-wrapper .help__text, .friends-section .carousel-container .friends-list-wrap .friends-list .friends__name {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  /* identical to box height, or 23px */
+  letter-spacing: 0.06em;
+}
+
+.about-section .about-wrap .about-text-container .about__text, .start-screen .start-container .text-container .start-text, .start-screen .header-nav .header__links {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  /* identical to box height, or 24px */
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   scroll-behavior: smooth;
   background-color: azure;
 }
 
 .main-container {
   max-width: 1280px;
-  margin: auto auto;
+  margin: 0 auto;
 }
 
 .start-screen {
@@ -24,13 +60,13 @@ body {
   min-height: 908px;
 }
 .start-screen .header {
+  margin-left: 40px;
   display: flex;
   justify-content: space-between;
-  flex-basis: 1200px;
+  width: 1200px;
   height: 60px;
 }
 .start-screen .header-logo {
-  width: 184px;
   height: 60px;
 }
 .start-screen .header-logo .header__text_bigger {
@@ -41,6 +77,7 @@ body {
   font-size: 32px;
   line-height: 110%;
   margin: 0 0 10px 0;
+  letter-spacing: 0.06em;
 }
 .start-screen .header-logo .header__text {
   color: #ffffff;
@@ -51,6 +88,216 @@ body {
   line-height: 15px;
   letter-spacing: 0.1em;
   margin: 0;
+  text-align: center;
+}
+.start-screen .header-nav {
+  flex-basis: 443px;
+  padding-top: 16px;
+}
+.start-screen .header-nav .header__nav-list {
+  display: flex;
+  margin: auto 0;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  row-gap: 10px;
+}
+.start-screen .header-nav .header__links {
+  text-decoration: none;
+  position: relative;
+  color: #CDCDCD;
+}
+.start-screen .header-nav .header__links:hover::after {
+  width: 100%;
+}
+.start-screen .header-nav .header__links::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 3px;
+  background-color: #F1CDB3;
+  transition: width 0.3s ease-in-out;
+}
+.start-screen .header-nav .header__links-active {
+  color: #ffffff;
+}
+.start-screen .header-nav .header__links-active::after {
+  width: 100%;
+}
+.start-screen .start-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  min-height: 728px;
+  margin: 90px 40px 0;
+}
+.start-screen .start-container .text-container {
+  margin-top: 163px;
+  flex-basis: 460px;
+}
+.start-screen .start-container .text-container .start-h1 {
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 42px;
+  width: 350px;
+}
+.start-screen .start-container .text-container .start-text {
+  color: #CDCDCD;
+  margin: 0 0 42px 0;
+}
+.start-screen .start-container .text-container .start-button {
+  background-color: #F1CDB3;
+  border-radius: 100px;
+  border: none;
+  width: 207px;
+  height: 52px;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17;
+  line-height: 130%;
+  /* identical to box height, or 17px */
+  letter-spacing: 0.06em;
+}
+.start-screen .start-container .text-container .start-button:hover {
+  background-color: #FDDCC4;
+}
+
+.about-section {
+  min-height: 588px;
+  background-color: #ffffff;
+  padding: 80px 20px 20px 20px;
+}
+.about-section .about-wrap {
+  display: flex;
+}
+.about-section .about-wrap .about__pic {
+  margin: 0px 120px 0 195px;
+}
+.about-section .about-wrap .about-text-container {
+  width: 430px;
+  margin-top: 14px;
+}
+.about-section .about-wrap .about-text-container .about__h3-text {
+  width: 370px;
+  color: #545454;
+  margin: 0;
+}
+.about-section .about-wrap .about-text-container .about__text {
+  color: #4C4C4C;
+  margin: 25px 0 0 0;
+}
+
+.friends-section {
+  min-height: 877px;
+  background-color: #F6F6F6;
+  padding: 80px 40px 0;
+  display: flex;
+  flex-direction: column;
+}
+.friends-section .friends__header {
+  text-align: center;
+  color: #545454;
+  margin: 0 0 60px 0;
+}
+.friends-section .carousel-container {
+  width: 1200px;
+  height: 435px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.friends-section .carousel-container .friends__arrow {
+  width: 50px;
+  height: 50px;
+}
+.friends-section .carousel-container .friends__arrow:last-child {
+  rotate: 180deg;
+}
+.friends-section .carousel-container .friends-list-wrap {
+  display: flex;
+  flex-basis: 990px;
+  justify-content: space-between;
+  height: 100%;
+}
+.friends-section .carousel-container .friends-list-wrap .friends-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 270px;
+  height: 435px;
+  background-color: #FAFAFA;
+  border-radius: 9px;
+  padding-bottom: 30px;
+}
+.friends-section .carousel-container .friends-list-wrap .friends-list .friends__name {
+  color: #545454;
+}
+.friends-section .carousel-container .friends-list-wrap .friends-list .friends__learn-more {
+  width: 187px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  background-color: #FAFAFA;
+  border-radius: 100px;
+  margin: 0 auto;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+.friends-section .carousel-container .friends-list-wrap .friends-list .friends__learn-more:hover {
+  border: none;
+  cursor: pointer;
+  background-color: #FDDCC4;
+}
+.friends-section .friends__button {
+  width: 261px;
+  height: 52px;
+  border: none;
+  margin: 0 auto;
+  margin-top: 60px;
+  border-radius: 100px;
+  background-color: #F1CDB3;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+.friends-section .friends__button:hover {
+  cursor: pointer;
+  background-color: #FDDCC4;
+}
+
+.help {
+  min-height: 611px;
+  background-color: #FFFFFF;
+  padding: 80px 127px 100px;
+}
+.help .help__header {
+  text-align: center;
+  margin: 0;
+}
+.help .help-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  margin-top: 60px;
+}
+.help .help-wrapper .help__text {
+  margin: 0;
+  color: #545454;
 }
 
 /*# sourceMappingURL=main.css.map */
