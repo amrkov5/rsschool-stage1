@@ -9,14 +9,15 @@ body {
     background-color: azure;
 }
 
-.main-container {
-    max-width: 1280px;
+.section-container {
+    width: 1280px;
     margin: 0 auto;
 }
 .start-screen {
     padding-top: 30px;
     background:url("../assets/main/img/noise_transparent@2x.svg") repeat, radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), url("../assets/main/img/start-screen-background.png");
     min-height: 908px;
+    // width:100%;
     .header {
         margin-left: 40px;
         display: flex;
@@ -26,7 +27,6 @@ body {
         height: 60px;
     }
     .header-logo {
-        // width: 184px;
         height: 60px;
         .header__text_bigger {
             color: $colorPrimary;
@@ -95,6 +95,7 @@ body {
         display: flex;
         justify-content: space-between;
         width: 1200px;
+        flex-basis: 1200px;
         min-height: 728px;
         // margin-top: 90px;
         margin:90px 40px 0;
@@ -140,7 +141,7 @@ body {
     .about-wrap {
         display: flex;
         .about__pic {
-            margin: 0px 120px 0 195px;
+            margin: 0px 120px 0 215px;
         }
         .about-text-container {
             width: 430px;
@@ -164,13 +165,18 @@ body {
     min-height: 877px;
     background-color: $bgColor;
     padding: 80px 40px 0;
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     .friends__header {
         @extend %header3;
         text-align: center;
         color: $fontHGray;
         margin: 0 0 60px 0;
+    }
+    .section-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .carousel-container {
         width:1200px;
@@ -251,25 +257,88 @@ body {
 .help {
     min-height: 611px;
     background-color: #FFFFFF;
-    padding: 80px 127px 100px;
+    .section-container {
+        padding: 80px 127px 100px;
+    }
     .help__header {
         @extend %header3;
         text-align: center;
         margin: 0;
+        color: $fontHGray;
     }
-    .help-wrapper {
+    .help-wrapper1 {
         display: flex;
         flex-wrap: wrap;
+        // width:1026px;
         justify-content: space-between;
-        align-items: center;
-        justify-items: center;
         margin-top: 60px;
-        // gap: 120px;
-        .help__text {
-            @extend %header4;
+    }
+    .help-wrapper2 {
+        display: flex;
+        flex-wrap: wrap;
+        // width:1026px;
+        justify-content: center;
+        margin-top: 55px;
+        gap: 120px;
+    }
+    .help__text {
+        @extend %header4;
+        margin: 30 0 0 0;
+        color:$fontHGray
+    }
+    .help__type {
+        width:fit-content;
+        text-align: center;
+    }
+}
+.donation {
+    min-height: 461px;
+    background-color: $bgColor;
+    padding: 79 20 20 20;
+    .donation-wrap {
+        display: flex;
+        justify-content: center;
+        .donation__pic {
+            margin-top:12px;
+            height: 261px;
+        }
+        .donation-text {
+            flex-basis: 380px;
+            margin-left: 30px;
+        }
+        .donation__header {
+            @extend %header3;
+            color: $fontHGray;
             margin: 0;
-            color:$fontHGray
+        }
+        .donation__bank {
+            @extend %header5;
+            color: $fontHGray;
+            margin: 20px 0;
+        }
+        .donation__card-number {
+            @extend %header4;
+            width: 349px;
+            height: 43px;
+            border-radius: 9px;
+            border: none;
+            background-color: $colorPrimary;
+            padding-left: 60px;
+            position: relative;
+            background-image: url("../assets/main/img/credit-card.svg");
+            background-repeat: no-repeat;
+            background-position: 15px 10px;
+        }
+        .donation__legal-info {
+            @extend %parS;
+            margin:20px 0 0 0;
+            color: #b2b2b2;
         }
     }
+}
+.footer {
+    min-height: 350px;
+    background:url("../assets/main/img/noise_transparent@2x.svg") repeat, radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), url("../assets/main/img/start-screen-background.png");
+    padding: 40px 40px 0 40px;
 }
 //sass --watch style/scss/style-main.scss style/main.css
