@@ -11,7 +11,7 @@
   /* or 57px */
 }
 
-.donation .donation-wrap .donation__header, .help .help__header, .friends-section .friends__header, .about-section .about-wrap .about-text-container .about__h3-text {
+.footer .section-container .footer-address-wrap .footer-address__h3, .footer .section-container .footer-questions-wrap .footer-questions__h3, .donation .donation-wrap .donation__header, .help .help__header, .friends-section .friends__header, .about-section .about-wrap .about-text-container .about__h3-text {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
@@ -21,7 +21,7 @@
   letter-spacing: 0.06em;
 }
 
-.donation .donation-wrap .donation__card-number, .help .help__text, .friends-section .carousel-container .friends-list-wrap .friends-list .friends__name {
+.footer .section-container .footer-address-wrap .footer-address__map, .footer .section-container .footer-questions-wrap .footer-questions__phone, .footer .section-container .footer-questions-wrap .footer-questions__mail, .donation .donation-wrap .donation__card-number, .help .help__text, .friends-section .carousel-container .friends-list-wrap .friends-list .friends__name {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
@@ -189,7 +189,7 @@ body {
 .about-section {
   min-height: 588px;
   background-color: #ffffff;
-  padding: 80px 20px 20px 20px;
+  padding: 80px 0px 0px 0px;
 }
 .about-section .about-wrap {
   display: flex;
@@ -214,7 +214,7 @@ body {
 .friends-section {
   min-height: 877px;
   background-color: #F6F6F6;
-  padding: 80px 40px 0;
+  padding: 80px 0 0px 0;
 }
 .friends-section .friends__header {
   text-align: center;
@@ -338,7 +338,7 @@ body {
 .donation {
   min-height: 461px;
   background-color: #F6F6F6;
-  padding: 79 20 20 20;
+  padding: 79px 0 0 0;
 }
 .donation .donation-wrap {
   display: flex;
@@ -380,7 +380,78 @@ body {
 .footer {
   min-height: 350px;
   background: url("../assets/main/img/noise_transparent@2x.svg") repeat, radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), url("../assets/main/img/start-screen-background.png");
-  padding: 40px 40px 0 40px;
+  display: flex;
+}
+.footer .section-container {
+  display: flex;
+  flex-basis: 1200px;
+  justify-content: space-between;
+  padding: 40px 0px 0px 0px;
+}
+.footer .section-container .footer-questions-wrap {
+  flex-basis: 279px;
+}
+.footer .section-container .footer-questions-wrap .footer-questions__h3 {
+  color: #FFFFFF;
+  margin: 16px 0 0 0;
+}
+.footer .section-container .footer-questions-wrap p {
+  margin: 44px 0 0 60px;
+}
+.footer .section-container .footer-questions-wrap p:last-child {
+  margin: 50px 0 0 60px;
+}
+.footer .section-container .footer-questions-wrap .footer-questions__mail {
+  color: #F1CDB3;
+  text-decoration: none;
+  position: relative;
+}
+.footer .section-container .footer-questions-wrap .footer-questions__mail::before {
+  content: url("../assets/main/img/icon-email.svg");
+  position: absolute;
+  display: inline-block;
+  top: -5px;
+  left: -60px;
+}
+.footer .section-container .footer-questions-wrap .footer-questions__phone {
+  color: #F1CDB3;
+  text-decoration: none;
+  position: relative;
+}
+.footer .section-container .footer-questions-wrap .footer-questions__phone::before {
+  content: url("../assets/main/img/icon-phone.svg");
+  position: absolute;
+  display: inline-block;
+  top: -5px;
+  left: -60px;
+}
+.footer .section-container .footer-address-wrap {
+  flex-basis: 305px;
+}
+.footer .section-container .footer-address-wrap .footer-address__h3 {
+  color: #FFFFFF;
+  margin: 16px 0 0 2px;
+}
+.footer .section-container .footer-address-wrap p {
+  margin: 33px 0 0 43px;
+}
+.footer .section-container .footer-address-wrap p:last-child {
+  margin: 37px 0 0 43px;
+}
+.footer .section-container .footer-address-wrap .footer-address__map {
+  color: #F1CDB3;
+  text-decoration: none;
+  position: relative;
+}
+.footer .section-container .footer-address-wrap .footer-address__map::before {
+  content: url("../assets/main/img/icon-marker.svg");
+  position: absolute;
+  display: inline-block;
+  top: 6px;
+  left: -42px;
+}
+.footer .section-container .footer-address-wrap .map1:before {
+  top: -5px;
 }
 
 /*# sourceMappingURL=main.css.map */

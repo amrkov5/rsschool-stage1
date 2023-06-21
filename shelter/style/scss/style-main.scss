@@ -12,6 +12,7 @@ body {
 .section-container {
     width: 1280px;
     margin: 0 auto;
+
 }
 .start-screen {
     padding-top: 30px;
@@ -137,7 +138,7 @@ body {
 .about-section {
     min-height: 588px;
     background-color: $fontWhite;
-    padding: 80px 20px 20px 20px;
+    padding: 80px 0px 0px 0px;
     .about-wrap {
         display: flex;
         .about__pic {
@@ -164,7 +165,7 @@ body {
 .friends-section {
     min-height: 877px;
     background-color: $bgColor;
-    padding: 80px 40px 0;
+    padding: 80px 0 0px 0;
     // display: flex;
     // flex-direction: column;
     .friends__header {
@@ -294,7 +295,7 @@ body {
 .donation {
     min-height: 461px;
     background-color: $bgColor;
-    padding: 79 20 20 20;
+    padding: 79px 0 0 0;
     .donation-wrap {
         display: flex;
         justify-content: center;
@@ -339,6 +340,83 @@ body {
 .footer {
     min-height: 350px;
     background:url("../assets/main/img/noise_transparent@2x.svg") repeat, radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), url("../assets/main/img/start-screen-background.png");
-    padding: 40px 40px 0 40px;
+    display: flex;
+    .section-container {
+        display: flex;
+        flex-basis: 1200px;
+        justify-content: space-between;
+        padding: 40px 0px 0px 0px;
+        .footer-questions-wrap {
+            flex-basis: 279px;
+            .footer-questions__h3 {
+                @extend %header3;
+                color:#FFFFFF;
+                margin: 16px 0 0 0;
+            }
+            p {
+                margin: 44px 0 0 60px;
+                &:last-child {
+                    margin: 50px 0 0 60px;
+                }
+            }
+            .footer-questions__mail {
+                @extend %header4;
+                color: $colorPrimary;
+                text-decoration: none;
+                position:relative;
+                &::before {
+                    content: url("../assets/main/img/icon-email.svg");
+                    position: absolute;
+                    display: inline-block;
+                    top: -5px;
+                    left:-60px;
+                }
+            }
+            .footer-questions__phone {
+                @extend %header4;
+                color: $colorPrimary;
+                text-decoration: none;
+                position:relative;
+                &::before {
+                    content: url("../assets/main/img/icon-phone.svg");
+                    position: absolute;
+                    display: inline-block;
+                    top: -5px;
+                    left:-60px;
+                }
+            }
+        }
+        .footer-address-wrap {
+            flex-basis: 305px;
+            .footer-address__h3 {
+                @extend %header3;
+                color: #FFFFFF;
+                margin: 16px 0 0 2px;
+            }
+            p {
+                margin: 33px 0 0 43px;
+                &:last-child {
+                    margin: 37px 0 0 43px;
+                }
+            }
+            .footer-address__map {
+                @extend %header4;
+                color: $colorPrimary;
+                text-decoration: none;
+                position:relative;
+                &::before {
+                    content: url("../assets/main/img/icon-marker.svg");
+                    position: absolute;
+                    display: inline-block;
+                    // transform: translateY(0%);
+                    top: 6px;
+                    left:-42px;
+                }
+            }
+            .map1:before {
+                top: -5px;
+            }
+        }
+    }
 }
 //sass --watch style/scss/style-main.scss style/main.css
