@@ -2,11 +2,8 @@
 @import "abstractions/colors";
 
 * {
-    box-sizing: border-box;
-}
-body {
     scroll-behavior: smooth;
-    background-color: azure;
+    box-sizing: border-box;
 }
 
 .section-container {
@@ -87,6 +84,7 @@ body {
         }
         .header__links-active {
             color: $fontWhite;
+            pointer-events: none;
             &::after {
                 width: 100%;
             }
@@ -117,6 +115,7 @@ body {
             }
             .start-button {
                 background-color: $colorPrimary;
+                cursor: pointer;
                 border-radius: 100px;
                 border: none;
                 width:207px;
@@ -207,6 +206,11 @@ body {
                 background-color: #FAFAFA;
                 border-radius: 9px;
                 padding-bottom: 30px;
+                transition: box-shadow 0.2s ease-in-out;
+                &:hover {
+                    box-shadow: 0 0 8px gray ;
+                    
+                }
                 .friends__name {
                     @extend %header4;
                     color: $fontHGray;

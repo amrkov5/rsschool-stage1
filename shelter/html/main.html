@@ -20,9 +20,9 @@
                     <nav class="header-nav">
                         <ul class="header__nav-list">
                             <li><a class="header__links header__links-active" href="">About the shelter</a></li>
-                            <li><a class="header__links" href="">Our pets</a></li>
-                            <li><a class="header__links" href="">Help the shelter</a></li>
-                            <li><a class="header__links" href="">Contacts</a></li>
+                            <li><a class="header__links" href="our_pets.html">Our pets</a></li>
+                            <li><a class="header__links" href="#help">Help the shelter</a></li>
+                            <li><a class="header__links" href="#footer">Contacts</a></li>
                         </ul>
                     </nav>
                 </header>
@@ -35,7 +35,7 @@
                             He or she will love you more than anybody
                             else in the world, you will see!
                         </p>
-                        <button class="start-button">Make a friend</button>
+                        <button class="start-button" onclick="window.location.href = '#our-friends';">Make a friend</button>
                     </div>
                     <img src="../assets/main/img/start-screen-puppy.png" alt="start-screen-puppy">
                 </div>
@@ -66,7 +66,7 @@
                 </div>
             </div>
         </section>
-        <section class="friends-section">
+        <section class="friends-section" id="our-friends">
             <div class="section-container">
                 <h3 class="friends__header">Our friends who <br>
                     are looking for a house</h3>
@@ -93,10 +93,10 @@
                     </div>
                     <img class="friends__arrow" src="../assets/main/img/button_arrow.svg" alt="arrow-right">
                 </div>
-                <button class="friends__button">Get to know the rest</button>
+                <button class="friends__button" onclick="window.location.href = 'our_pets.html';">Get to know the rest</button>
             </div>
         </section>
-        <section class="help">
+        <section class="help" id="help">
             <div class="section-container">
                 <h3 class="help__header">How you can help <br>our shelter</h3>
                 <div class="help-wrapper1">
@@ -156,7 +156,7 @@
                 </div>
             </div>
         </section>
-        <footer class="footer">
+        <footer class="footer" id="footer">
             <div class="section-container">
                 <div class="footer-questions-wrap">
                     <h3 class="footer-questions__h3">For questions and suggestions</h3>
