@@ -11,7 +11,7 @@
 <body>
     <!-- <div class="main-container"> -->
         <section class="start-screen">
-            <div class="section-container">
+            <div class="start-screen-inner section-container">
                 <header class="header">
                     <div class="header-logo">
                         <p class="header__text_bigger">Cozy House</p>
@@ -37,16 +37,18 @@
                         </p>
                         <button class="start-button" onclick="window.location.href = '#our-friends';">Make a friend</button>
                     </div>
-                    <img src="../assets/main/img/start-screen-puppy.png" alt="start-screen-puppy">
+                    <div class="start-screen-img-wrap">
+                        <img class="start-screen__img" src="../assets/main/img/start-screen-puppy.png" alt="start-screen-puppy">
+                    </div>
                 </div>
             </div>
         </section>
         <section class = "about-section">
-            <div class="section-container">
+            <div class="about-section-inner section-container">
                 <div class="about-wrap">
                     <img class="about__pic" src="../assets/main/img/about-pets.png" alt="pets-picture">
                     <div class="about-text-container">
-                        <h1 class="about__h3-text">About the shelter “Cozy House”</h1>
+                        <h1 class="about__h3-text">About the shelter <br> “Cozy House”</h1>
                         <p class="about__text">Currently we have 121 dogs and 342 cats 
                             on our hands and statistics show that 
                             only 20% of them will find a family. 
@@ -67,9 +69,8 @@
             </div>
         </section>
         <section class="friends-section" id="our-friends">
-            <div class="section-container">
-                <h3 class="friends__header">Our friends who <br>
-                    are looking for a house</h3>
+            <div class=" friends-section-inner section-container">
+                <h3 class="friends__header">Our friends who <br>are looking for a house</h3>
                 <div class="carousel-container">
                     <img class="friends__arrow" src="../assets/main/img/button_arrow.svg" alt="arrow-left">
                     <div class="friends-list-wrap">
@@ -78,7 +79,6 @@
                             <p class="friends__name">Katrine</p>
                             <button class="friends__learn-more">Learn more</button>
                         </div>
-                        
                         <div class="friends-list">
                             <img src="../assets/main/img/pets/pets-jennifer.png" alt="Jennifer">
                             <p class="friends__name">Jennifer</p>
@@ -97,9 +97,10 @@
             </div>
         </section>
         <section class="help" id="help">
-            <div class="section-container">
+            <div class="help-inner section-container">
                 <h3 class="help__header">How you can help <br>our shelter</h3>
-                <div class="help-wrapper1">
+                <!-- <div class="help-wrapper1"> -->
+                <div class="help-wrapper">
                     <div class="help__type">
                         <img src="../assets/main/img/help_pick/icon-pet-food.svg" alt="food_icon" class="help__icon">
                         <p class="help__text">Pet&nbsp;food</p>
@@ -120,8 +121,6 @@
                         <img src="../assets/main/img/help_pick/icon-shampoos.svg" alt="shampoo_icon" class="help__icon">
                         <p class="help__text">Shampoos</p>
                     </div>
-                </div>
-                <div class="help-wrapper2">
                     <div class="help__type">
                         <img src="../assets/main/img/help_pick/icon-vitamins.svg" alt="vitamins_icon" class="help__icon">
                         <p class="help__text">Vitamins</p>
@@ -142,7 +141,7 @@
             </div>
         </section>
         <section class="donation">
-            <div class="section-container">
+            <div class="donation-inner section-container">
                 <div class="donation-wrap">
                     <img class="donation__pic" src="../assets/main/img/donation-dog.png" alt="donation_dog">
                     <div class="donation-text">
