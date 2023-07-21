@@ -359,12 +359,12 @@
         justify-content: center;
         flex-wrap: wrap;
         .donation__pic {
-            order: 1;
+            // order: 1;
             margin-top:12px;
             height: 261px;
         }
         .donation-text {
-            order: 0;
+            // order: 0;
             flex-basis: 380px;
             margin-left: 30px;
         }
