@@ -19,7 +19,7 @@
     min-height: 908px;
     display: flex;
     flex-wrap: wrap;
-    align-content: space-between;
+    // align-content: space-between;
     padding: 30px 20px 0 20px;
     width:100%;
     .header {
@@ -97,15 +97,24 @@
     .start-container {
         display: flex;
         justify-content: space-between;
-        width: 1200px;
+        // width: 1200px;
         flex-basis: 1200px;
         min-height: 728px;
         // margin-top: 90px;
         margin:0 auto 0 auto;
         align-content: flex-end;
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+            flex-basis: 1115px;
+            padding-left: 55px;
+            align-items: center;
+        }
         .text-container {
             margin-top: 163px;
             flex-basis: 460px;
+            @media screen and (max-width: 900px) {
+                max-width: 322px;
+            }
             .start-h1 {
                 @extend %header2;
                 color: $fontWhite;
@@ -141,6 +150,7 @@
             display: flex;
             flex-basis: 698px;
             align-items: flex-end;
+            // height: min-content;
             .start-screen__img {
                 width: 100%;
                 height: auto;
